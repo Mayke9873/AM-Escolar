@@ -27,3 +27,6 @@ __recovery/
 *.ppu
 *.o
 *.compiled
+
+
+images/
