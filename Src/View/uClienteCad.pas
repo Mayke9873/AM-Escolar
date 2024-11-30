@@ -236,7 +236,7 @@ begin
     dsResponsavel.Append;            
     dsResponsavel.FieldByName('id').AsInteger := aResponsavel.id;
     dsResponsavel.FieldByName('nome').AsString := aResponsavel.nome;
-    dsResponsavel.FieldByName('rg').AsString := aResponsavel.RG;
+    dsResponsavel.FieldByName('cpf').AsString := aResponsavel.CPF;
     dsResponsavel.FieldByName('endereco').Asstring := aResponsavel.endereco;
     dsResponsavel.FieldByName('bairro').AsString := aResponsavel.bairro;
     dsResponsavel.FieldByName('cidade').AsString := aResponsavel.cidade;

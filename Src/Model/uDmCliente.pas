@@ -24,7 +24,6 @@ type
     qResponsavelid: TZInt64Field;
     qResponsavelidAluno: TZInt64Field;
     qResponsavelnome: TZUnicodeStringField;
-    qResponsavelrg: TZUnicodeStringField;
     qResponsavelendereco: TZUnicodeStringField;
     qResponsavelbairro: TZUnicodeStringField;
     qResponsavelcidade: TZUnicodeStringField;
@@ -38,6 +37,7 @@ type
     qAlunoinfoEspecial: TZUnicodeCLobField;
     qAlunodeleted: TZDateTimeField;
     qResponsaveldeleted: TZDateTimeField;
+    qResponsavelCPF: TZUnicodeStringField;
   private
     procedure SalvarResponsavel(idAluno: integer; aResponsavel: TResponsavel);
     { Private declarations }
@@ -100,7 +100,7 @@ begin
         aAluno.responsaveis.Add(TResponsavel.Create);
         responsaveis[I].id      := qResponsavelid.AsInteger;
         responsaveis[I].nome    := qResponsavelnome.AsString;
-        responsaveis[I].RG      := qResponsavelrg.AsString;
+        responsaveis[I].CPF      := qResponsavelCPF.AsString;
         responsaveis[I].endereco  := qResponsavelendereco.AsString;
         responsaveis[I].bairro  := qResponsavelbairro.AsString;
         responsaveis[I].cidade  := qResponsavelcidade.AsString;
@@ -196,7 +196,7 @@ begin
       qResponsavel.FieldByName('idAluno').AsInteger := idAluno;
       qResponsavel.FieldByName('id').AsInteger := aResponsavel.id;
       qResponsavel.FieldByName('nome').AsString := aResponsavel.nome;
-      qResponsavel.FieldByName('rg').AsString := aResponsavel.RG;
+      qResponsavel.FieldByName('CPF').AsString := aResponsavel.CPF;
       qResponsavel.FieldByName('endereco').Asstring := aResponsavel.endereco;
       qResponsavel.FieldByName('bairro').AsString := aResponsavel.bairro;
       qResponsavel.FieldByName('cidade').AsString := aResponsavel.cidade;

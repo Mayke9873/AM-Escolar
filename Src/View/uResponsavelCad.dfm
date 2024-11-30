@@ -180,12 +180,12 @@ object FrmResponsavelCad: TFrmResponsavelCad
       Height = 15
       Caption = 'Telefone 2'
     end
-    object lblDtNasc1: TLabel
+    object lblCPF: TLabel
       Left = 454
       Top = 31
-      Width = 15
+      Width = 21
       Height = 15
-      Caption = 'RG'
+      Caption = 'CPF'
     end
     object lblNome1: TLabel
       Left = 24
@@ -215,7 +215,7 @@ object FrmResponsavelCad: TFrmResponsavelCad
       Height = 15
       Caption = 'Bairro'
     end
-    object edtRG: TEdit
+    object edtCPF: TEdit
       Left = 454
       Top = 47
       Width = 178

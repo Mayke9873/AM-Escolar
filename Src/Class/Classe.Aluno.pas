@@ -18,6 +18,7 @@ type
     Ftelefone: String;
     FCEP: String;
     Ftelefone2: String;
+    FCPF: string;
     Fex: Integer;
     procedure Setbairro(const Value: String);
     procedure Setcidade(const Value: String);
@@ -30,11 +31,13 @@ type
     procedure SetCEP(const Value: String);
     procedure Settelefone2(const Value: String);
     procedure Setex(const Value: Integer);
+    procedure SetCPF(const Value: String);
 
   public
     property id: Integer read Fid write Setid;
     property nome: String read Fnome write Setnome;
     property RG: String read FRG write SetRG;
+    property CPF: String read FCPF write SetCPF;
     property endereco: String read Fendereco write Setendereco;
     property bairro: String read Fbairro write Setbairro;
     property cidade: String read Fcidade write Setcidade;
@@ -215,6 +218,11 @@ end;
 procedure TResponsavel.Setcidade(const Value: String);
 begin
   Fcidade := Value;
+end;
+
+procedure TResponsavel.SetCPF(const Value: String);
+begin
+  FCPF := Value;
 end;
 
 procedure TResponsavel.Setendereco(const Value: String);

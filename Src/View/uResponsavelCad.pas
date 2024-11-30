@@ -21,8 +21,8 @@ type
     lblNomePrograma1: TLabel;
     edtNome: TEdit;
     lblNome1: TLabel;
-    lblDtNasc1: TLabel;
-    edtRG: TEdit;
+    lblCPF: TLabel;
+    edtCPF: TEdit;
     edtCidade: TEdit;
     lblNomePrograma11: TLabel;
     edtBairro: TEdit;
@@ -72,7 +72,7 @@ begin
   with Fresponsavel do
   begin
     nome := edtNome.Text;
-    RG := edtRG.Text;
+    CPF := edtCPF.Text;
     endereco := edtEndereco.Text;
     bairro := edtBairro.Text;
     cidade := edtCidade.Text;
@@ -135,7 +135,7 @@ begin
   end;
 
   edtNome.Text := Fresponsavel.nome;
-  edtRG.Text := Fresponsavel.RG;
+  edtCPF.Text := Fresponsavel.CPF;
   edtEndereco.Text := Fresponsavel.endereco;
   edtBairro.Text := Fresponsavel.bairro;
   edtCidade.Text := Fresponsavel.cidade;

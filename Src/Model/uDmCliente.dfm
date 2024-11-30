@@ -247,7 +247,7 @@ inherited DmCliente: TDmCliente
     UpdateObject = zPesponsavel
     SQL.Strings = (
       'select'
-      '    id, idAluno, nome, rg, endereco, bairro,'
+      '    id, idAluno, nome, CPF, endereco, bairro,'
       '    cidade, uf, CEP, telefone, telefone2, '
       '    deleted'
       'from responsavel'
@@ -284,10 +284,9 @@ inherited DmCliente: TDmCliente
       FieldName = 'nome'
       Size = 255
     end
-    object qResponsavelrg: TZUnicodeStringField
-      DisplayLabel = 'RG'
-      FieldName = 'rg'
-      Size = 50
+    object qResponsavelCPF: TZUnicodeStringField
+      FieldName = 'CPF'
+      Size = 11
     end
     object qResponsavelendereco: TZUnicodeStringField
       DisplayLabel = 'Endere'#231'o'
@@ -334,20 +333,20 @@ inherited DmCliente: TDmCliente
     InsertSQL.Strings = (
       'INSERT INTO responsavel'
       
-        '  (id, idAluno, nome, rg, endereco, bairro, cidade, uf, cep, tel' +
-        'efone, '
+        '  (id, idAluno, nome, CPF, endereco, bairro, cidade, uf, cep, te' +
+        'lefone, '
       '   telefone2)'
       'VALUES'
       
-        '  (:id, :idAluno, :nome, :rg, :endereco, :bairro, :cidade, :uf, ' +
-        ':cep, :telefone, '
+        '  (:id, :idAluno, :nome, :CPF, :endereco, :bairro, :cidade, :uf,' +
+        ' :cep, :telefone, '
       '   :telefone2)')
     ModifySQL.Strings = (
       'UPDATE responsavel SET'
       '  id = :id,'
       '  idAluno = :idAluno,'
       '  nome = :nome,'
-      '  rg = :rg,'
+      '  CPF = :CPF,'
       '  endereco = :endereco,'
       '  bairro = :bairro,'
       '  cidade = :cidade,'
@@ -372,7 +371,7 @@ inherited DmCliente: TDmCliente
         Name = 'nome'
       end
       item
-        Name = 'rg'
+        Name = 'CPF'
       end
       item
         Name = 'endereco'

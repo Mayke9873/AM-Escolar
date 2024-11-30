@@ -682,7 +682,7 @@ object FrmClienteCad: TFrmClienteCad
       FieldName = 'nome'
     end
     object dsResponsavelrg: TStringField
-      FieldName = 'rg'
+      FieldName = 'cpf'
     end
     object dsResponsavelendereco: TStringField
       FieldName = 'endereco'
