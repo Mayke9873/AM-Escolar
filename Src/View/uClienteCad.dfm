@@ -3,7 +3,7 @@ object FrmClienteCad: TFrmClienteCad
   Top = 0
   BorderStyle = bsNone
   Caption = 'FrmClienteCad'
-  ClientHeight = 489
+  ClientHeight = 521
   ClientWidth = 718
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -57,7 +57,7 @@ object FrmClienteCad: TFrmClienteCad
     Left = 18
     Top = 53
     Width = 682
-    Height = 371
+    Height = 403
     Margins.Left = 18
     Margins.Top = 4
     Margins.Right = 18
@@ -78,35 +78,35 @@ object FrmClienteCad: TFrmClienteCad
       end
       object lblNomePrograma: TLabel
         Left = 21
-        Top = 86
+        Top = 139
         Width = 52
         Height = 15
         Caption = 'Programa'
       end
       object Label1: TLabel
         Left = 329
-        Top = 86
+        Top = 139
         Width = 71
         Height = 15
         Caption = 'Carga hor'#225'ria'
       end
       object Label2: TLabel
         Left = 21
-        Top = 195
+        Top = 248
         Width = 16
         Height = 15
         Caption = 'Pai'
       end
       object Label3: TLabel
         Left = 21
-        Top = 259
+        Top = 312
         Width = 23
         Height = 15
         Caption = 'M'#227'e'
       end
       object Label4: TLabel
         Left = 493
-        Top = 86
+        Top = 139
         Width = 41
         Height = 15
         Caption = 'Per'#237'odo'
@@ -120,10 +120,17 @@ object FrmClienteCad: TFrmClienteCad
       end
       object lblEscola: TLabel
         Left = 21
-        Top = 139
+        Top = 192
         Width = 33
         Height = 15
         Caption = 'Escola'
+      end
+      object lblCPF: TLabel
+        Left = 21
+        Top = 81
+        Width = 21
+        Height = 15
+        Caption = 'CPF'
       end
       object edtNome: TEdit
         Left = 21
@@ -141,7 +148,7 @@ object FrmClienteCad: TFrmClienteCad
       end
       object edtNomePrograma: TEdit
         Left = 21
-        Top = 102
+        Top = 155
         Width = 302
         Height = 29
         Font.Charset = DEFAULT_CHARSET
@@ -154,7 +161,7 @@ object FrmClienteCad: TFrmClienteCad
         TabOrder = 3
       end
       object chkAtivo: TCheckBox
-        Left = 567
+        Left = 570
         Top = 52
         Width = 56
         Height = 17
@@ -171,7 +178,7 @@ object FrmClienteCad: TFrmClienteCad
       end
       object edtCargahr: TEdit
         Left = 329
-        Top = 102
+        Top = 155
         Width = 158
         Height = 29
         Font.Charset = DEFAULT_CHARSET
@@ -185,7 +192,7 @@ object FrmClienteCad: TFrmClienteCad
       end
       object edtPai: TEdit
         Left = 21
-        Top = 211
+        Top = 264
         Width = 601
         Height = 29
         Font.Charset = DEFAULT_CHARSET
@@ -199,7 +206,7 @@ object FrmClienteCad: TFrmClienteCad
       end
       object edtMae: TEdit
         Left = 21
-        Top = 275
+        Top = 328
         Width = 601
         Height = 29
         Font.Charset = DEFAULT_CHARSET
@@ -213,7 +220,7 @@ object FrmClienteCad: TFrmClienteCad
       end
       object cbPeriodo: TComboBox
         Left = 493
-        Top = 102
+        Top = 155
         Width = 129
         Height = 28
         Cursor = crHandPoint
@@ -227,11 +234,9 @@ object FrmClienteCad: TFrmClienteCad
         Font.Height = -15
         Font.Name = 'Segoe UI'
         Font.Style = []
-        ItemIndex = 0
         ParentBiDiMode = False
         ParentFont = False
         TabOrder = 5
-        Text = 'Manh'#227
         Items.Strings = (
           'Manh'#227
           'Tarde'
@@ -255,7 +260,7 @@ object FrmClienteCad: TFrmClienteCad
       end
       object dblkcbbEscola: TDBLookupComboBox
         Left = 21
-        Top = 155
+        Top = 208
         Width = 302
         Height = 29
         DropDownAlign = daCenter
@@ -271,6 +276,20 @@ object FrmClienteCad: TFrmClienteCad
         ParentFont = False
         TabOrder = 6
       end
+      object edtCPF: TEdit
+        Left = 21
+        Top = 97
+        Width = 302
+        Height = 29
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        MaxLength = 50
+        ParentFont = False
+        TabOrder = 9
+      end
     end
     object tsResponsavel: TTabSheet
       Caption = 'Respons'#225'veis'
@@ -279,7 +298,7 @@ object FrmClienteCad: TFrmClienteCad
         Left = 0
         Top = 0
         Width = 674
-        Height = 341
+        Height = 373
         Align = alClient
         BevelOuter = bvNone
         Caption = 'pnl1'
@@ -289,7 +308,7 @@ object FrmClienteCad: TFrmClienteCad
           Left = 4
           Top = 52
           Width = 666
-          Height = 289
+          Height = 321
           Margins.Left = 4
           Margins.Top = 0
           Margins.Right = 4
@@ -322,8 +341,8 @@ object FrmClienteCad: TFrmClienteCad
             end
             item
               Expanded = False
-              FieldName = 'rg'
-              Title.Caption = 'RG'
+              FieldName = 'cpf'
+              Title.Caption = 'CPF'
               Width = 140
               Visible = True
             end
@@ -542,7 +561,7 @@ object FrmClienteCad: TFrmClienteCad
   object pnlBotoes: TPanel
     AlignWithMargins = True
     Left = 0
-    Top = 432
+    Top = 464
     Width = 718
     Height = 49
     Margins.Left = 0

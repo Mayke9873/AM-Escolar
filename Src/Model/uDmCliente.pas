@@ -38,6 +38,7 @@ type
     qAlunodeleted: TZDateTimeField;
     qResponsaveldeleted: TZDateTimeField;
     qResponsavelCPF: TZUnicodeStringField;
+    qAlunoCPF: TZUnicodeStringField;
   private
     procedure SalvarResponsavel(idAluno: integer; aResponsavel: TResponsavel);
     { Private declarations }
@@ -156,6 +157,7 @@ begin
   qAlunoativo.AsInteger     := IfThen(aAluno.ativo, 1, 0);
   qAlunoinfoSaude.AsString  := Trim(aAluno.infoSaude);
   qAlunoinfoEspecial.AsString  := Trim(aAluno.infoEspecial);
+  qAlunoCPF.AsString := Trim(aAluno.CPF);
 
   qAluno.Post;
   qAluno.ApplyUpdates;

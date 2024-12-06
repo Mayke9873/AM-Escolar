@@ -73,6 +73,8 @@ type
     dsResponsavelindex: TIntegerField;
     dsResponsavelcep: TStringField;
     dsResponsaveltelefone2: TStringField;
+    edtCPF: TEdit;
+    lblCPF: TLabel;
     procedure btnCancelarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -164,7 +166,7 @@ begin
   FrmResponsavelCad.ExecuteOnClose := InserirResponsaveisCDS;
   FrmResponsavelCad.ShowModal;
     
-  dsResponsavel.Locate('index', IfThen(LResponsavel.id <> 0, 
+  dsResponsavel.Locate('index', IfThen(LResponsavel.id <> 0,
                                   index_Responsavel, Aluno.responsaveis.Count), []);
 end;
 
@@ -195,6 +197,7 @@ begin
       nomeMae := edtMae.Text;
       infoSaude := mSaude.Lines.Text;
       infoEspecial := mEspecial.Lines.Text;
+      CPF := edtCPF.Text;
 
       if (dblkcbbEscola.KeyValue <> null) and (dblkcbbEscola.KeyValue <> EmptyStr) then
         idEscola := dblkcbbEscola.KeyValue;
@@ -287,6 +290,7 @@ begin
   cbPeriodo.Text      := qAluno.FieldByName('periodo').AsString;
   edtPai.Text         := qAluno.FieldByName('nomePai').AsString;
   edtMae.Text         := qAluno.FieldByName('nomeMae').AsString;
+  edtCPF.Text         := qAluno.FieldByName('CPF').AsString;
   dblkcbbEscola.KeyValue := qAluno.FieldByName('idEscola').AsString;
 
   if NOT (qAluno.FieldByName('infoSaude').AsString.Trim = EmptyStr) then

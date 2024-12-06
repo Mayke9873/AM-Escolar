@@ -10,7 +10,7 @@ inherited DmCliente: TDmCliente
       '  id, idEscola, nome, dtNasc,'
       '  NomePai, NomeMae, nomePrograma,'
       '  cargaHoraria, periodo, infoSaude, infoEspecial,'
-      '  ativo,'
+      '  ativo, CPF,'
       '  case ativo when 1'
       '    then '#39'S'#39
       '    else '#39'N'#39' end ativoStr,'
@@ -96,6 +96,10 @@ inherited DmCliente: TDmCliente
     object qAlunodeleted: TZDateTimeField
       FieldName = 'deleted'
     end
+    object qAlunoCPF: TZUnicodeStringField
+      FieldName = 'CPF'
+      Size = 11
+    end
   end
   object zAluno: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -138,12 +142,12 @@ inherited DmCliente: TDmCliente
       
         '  (id, idEscola, nome, dtNasc, NomePai, NomeMae, nomePrograma, c' +
         'argaHoraria, '
-      '   periodo, infoSaude, infoEspecial, ativo)'
+      '   periodo, infoSaude, infoEspecial, ativo, CPF)'
       'VALUES'
       
         '  (:id, :idEscola, :nome, :dtNasc, :NomePai, :NomeMae, :nomeProg' +
-        'rama, :cargaHoraria, '
-      '   :periodo, :infoSaude, :infoEspecial, :ativo)')
+        'rama, :cargaHoraria,'
+      '   :periodo, :infoSaude, :infoEspecial, :ativo, :CPF)')
     ModifySQL.Strings = (
       'UPDATE aluno SET'
       '  id = :id,'
@@ -158,6 +162,7 @@ inherited DmCliente: TDmCliente
       '  infoSaude = :infoSaude,'
       '  infoEspecial = :infoEspecial,'
       '  ativo = :ativo,'
+      '  CPF = :CPF,'
       '  deleted = :deleted'
       'WHERE'
       '  aluno.id = :OLD_id')
@@ -200,6 +205,9 @@ inherited DmCliente: TDmCliente
       end
       item
         Name = 'ativo'
+      end
+      item
+        Name = 'CPF'
       end
       item
         Name = 'deleted'

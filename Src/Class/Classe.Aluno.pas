@@ -62,7 +62,9 @@ type
     FinfoEspecial: String;
     Fnome: String;
     Fativo: Boolean;
+    FCPF: string;
     Fresponsaveis: TObjectList<TResponsavel>;
+
     procedure SetcargaHoraria(const Value: Real);
     procedure SetdtNasc(const Value: String);
     procedure Setid(const Value: Integer);
@@ -75,6 +77,7 @@ type
     procedure SetnomePrograma(const Value: String);
     procedure Setperiodo(const Value: String);
     procedure Setativo(const Value: Boolean);
+    procedure SetCPF(const Value: string);
     procedure Setresponsaveis(const Value: TObjectList<TResponsavel>);
 
   public
@@ -90,6 +93,7 @@ type
     property infoSaude: String read FinfoSaude write SetinfoSaude;
     property infoEspecial: String read FinfoEspecial write SetinfoEspecial;
     property ativo: Boolean read Fativo write Setativo;
+    property CPF: String read FCPF write SetCPF;
     property responsaveis: TObjectList<TResponsavel> read Fresponsaveis write Setresponsaveis;
 
     constructor Create;
@@ -144,6 +148,11 @@ end;
 procedure TAluno.SetcargaHoraria(const Value: Real);
 begin
   FcargaHoraria := Value;
+end;
+
+procedure TAluno.SetCPF(const Value: string);
+begin
+  FCPF := Value;
 end;
 
 procedure TAluno.SetdtNasc(const Value: String);
