@@ -287,7 +287,7 @@ begin
   chkAtivo.Checked    := (qAluno.FieldByName('ativoStr').AsString = 'S');
   edtNomePrograma.Text:= qAluno.FieldByName('nomePrograma').AsString;
   edtCargahr.Text     := qAluno.FieldByName('cargaHoraria').AsString;
-  cbPeriodo.Text      := qAluno.FieldByName('periodo').AsString;
+  cbPeriodo.ItemIndex := cbPeriodo.Items.IndexOf(qAluno.FieldByName('periodo').AsString);
   edtPai.Text         := qAluno.FieldByName('nomePai').AsString;
   edtMae.Text         := qAluno.FieldByName('nomeMae').AsString;
   edtCPF.Text         := qAluno.FieldByName('CPF').AsString;
