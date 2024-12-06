@@ -240,7 +240,8 @@ object FrmClienteCad: TFrmClienteCad
         Items.Strings = (
           'Manh'#227
           'Tarde'
-          'Noite')
+          'Noite'
+          'Integral')
       end
       object medtDtNasc: TMaskEdit
         Left = 437
