@@ -15,9 +15,6 @@ object DmGeral: TDmGeral
     User = 'root'
     Password = '123456'
     Protocol = 'mysql'
-    LibraryLocation = 
-      'Z:\Desenvolvimento\Projetos\Delphi\AMSystem-Delphi\bin\libmariad' +
-      'b.dll'
     Left = 40
     Top = 32
   end
