@@ -39,6 +39,7 @@ type
     qResponsaveldeleted: TZDateTimeField;
     qResponsavelCPF: TZUnicodeStringField;
     qAlunoCPF: TZUnicodeStringField;
+    qAlunoPermiteUsoImagem: TZShortIntField;
   private
     procedure SalvarResponsavel(idAluno: integer; aResponsavel: TResponsavel);
     { Private declarations }
@@ -158,6 +159,7 @@ begin
   qAlunoinfoSaude.AsString  := Trim(aAluno.infoSaude);
   qAlunoinfoEspecial.AsString  := Trim(aAluno.infoEspecial);
   qAlunoCPF.AsString := Trim(aAluno.CPF);
+  qAlunoPermiteUsoImagem.AsInteger := IfThen(aAluno.permiteUsoImagem, 1, 0);
 
   qAluno.Post;
   qAluno.ApplyUpdates;

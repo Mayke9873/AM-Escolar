@@ -10,7 +10,7 @@ inherited DmCliente: TDmCliente
       '  id, idEscola, nome, dtNasc,'
       '  NomePai, NomeMae, nomePrograma,'
       '  cargaHoraria, periodo, infoSaude, infoEspecial,'
-      '  ativo, CPF,'
+      '  ativo, CPF, PermiteUsoImagem,'
       '  case ativo when 1'
       '    then '#39'S'#39
       '    else '#39'N'#39' end ativoStr,'
@@ -100,6 +100,9 @@ inherited DmCliente: TDmCliente
       FieldName = 'CPF'
       Size = 11
     end
+    object qAlunoPermiteUsoImagem: TZShortIntField
+      FieldName = 'PermiteUsoImagem'
+    end
   end
   object zAluno: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -142,12 +145,16 @@ inherited DmCliente: TDmCliente
       
         '  (id, idEscola, nome, dtNasc, NomePai, NomeMae, nomePrograma, c' +
         'argaHoraria, '
-      '   periodo, infoSaude, infoEspecial, ativo, CPF)'
+      
+        '   periodo, infoSaude, infoEspecial, ativo, CPF, PermiteUsoImage' +
+        'm)'
       'VALUES'
       
         '  (:id, :idEscola, :nome, :dtNasc, :NomePai, :NomeMae, :nomeProg' +
         'rama, :cargaHoraria,'
-      '   :periodo, :infoSaude, :infoEspecial, :ativo, :CPF)')
+      
+        '   :periodo, :infoSaude, :infoEspecial, :ativo, :CPF, :PermiteUs' +
+        'oImagem)')
     ModifySQL.Strings = (
       'UPDATE aluno SET'
       '  id = :id,'
@@ -163,6 +170,7 @@ inherited DmCliente: TDmCliente
       '  infoEspecial = :infoEspecial,'
       '  ativo = :ativo,'
       '  CPF = :CPF,'
+      '  PermiteUsoImagem = :PermiteUsoImagem,'
       '  deleted = :deleted'
       'WHERE'
       '  aluno.id = :OLD_id')
@@ -208,6 +216,9 @@ inherited DmCliente: TDmCliente
       end
       item
         Name = 'CPF'
+      end
+      item
+        Name = 'PermiteUsoImagem'
       end
       item
         Name = 'deleted'

@@ -84,11 +84,12 @@ object FrmClienteCad: TFrmClienteCad
         Caption = 'Programa'
       end
       object Label1: TLabel
-        Left = 329
+        Left = 464
         Top = 139
         Width = 71
         Height = 15
         Caption = 'Carga hor'#225'ria'
+        Visible = False
       end
       object Label2: TLabel
         Left = 21
@@ -105,15 +106,15 @@ object FrmClienteCad: TFrmClienteCad
         Caption = 'M'#227'e'
       end
       object Label4: TLabel
-        Left = 493
-        Top = 139
+        Left = 329
+        Top = 140
         Width = 41
         Height = 15
         Caption = 'Per'#237'odo'
       end
       object lblDtNasc: TLabel
-        Left = 441
-        Top = 30
+        Left = 329
+        Top = 80
         Width = 82
         Height = 15
         Caption = 'Dt. Nascimento'
@@ -135,7 +136,7 @@ object FrmClienteCad: TFrmClienteCad
       object edtNome: TEdit
         Left = 21
         Top = 46
-        Width = 412
+        Width = 418
         Height = 29
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -161,8 +162,8 @@ object FrmClienteCad: TFrmClienteCad
         TabOrder = 3
       end
       object chkAtivo: TCheckBox
-        Left = 570
-        Top = 52
+        Left = 461
+        Top = 39
         Width = 56
         Height = 17
         Caption = 'Ativo'
@@ -177,7 +178,7 @@ object FrmClienteCad: TFrmClienteCad
         TabOrder = 2
       end
       object edtCargahr: TEdit
-        Left = 329
+        Left = 464
         Top = 155
         Width = 158
         Height = 29
@@ -189,6 +190,7 @@ object FrmClienteCad: TFrmClienteCad
         MaxLength = 10
         ParentFont = False
         TabOrder = 4
+        Visible = False
       end
       object edtPai: TEdit
         Left = 21
@@ -219,9 +221,9 @@ object FrmClienteCad: TFrmClienteCad
         TabOrder = 8
       end
       object cbPeriodo: TComboBox
-        Left = 493
-        Top = 155
-        Width = 129
+        Left = 329
+        Top = 156
+        Width = 110
         Height = 28
         Cursor = crHandPoint
         BevelInner = bvNone
@@ -244,8 +246,8 @@ object FrmClienteCad: TFrmClienteCad
           'Integral')
       end
       object medtDtNasc: TMaskEdit
-        Left = 437
-        Top = 46
+        Left = 329
+        Top = 97
         Width = 110
         Height = 29
         EditMask = '00/00/0000;1;_'
@@ -290,6 +292,20 @@ object FrmClienteCad: TFrmClienteCad
         MaxLength = 50
         ParentFont = False
         TabOrder = 9
+      end
+      object chkUsoImagem: TCheckBox
+        Left = 461
+        Top = 55
+        Width = 184
+        Height = 21
+        Caption = 'Permite uso de Imagem'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 10
       end
     end
     object tsResponsavel: TTabSheet

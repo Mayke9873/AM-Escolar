@@ -75,6 +75,7 @@ type
     dsResponsaveltelefone2: TStringField;
     edtCPF: TEdit;
     lblCPF: TLabel;
+    chkUsoImagem: TCheckBox;
     procedure btnCancelarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -198,6 +199,7 @@ begin
       infoSaude := mSaude.Lines.Text;
       infoEspecial := mEspecial.Lines.Text;
       CPF := edtCPF.Text;
+      permiteUsoImagem := chkUsoImagem.Checked;
 
       if (dblkcbbEscola.KeyValue <> null) and (dblkcbbEscola.KeyValue <> EmptyStr) then
         idEscola := dblkcbbEscola.KeyValue;
@@ -292,6 +294,7 @@ begin
   edtMae.Text         := qAluno.FieldByName('nomeMae').AsString;
   edtCPF.Text         := qAluno.FieldByName('CPF').AsString;
   dblkcbbEscola.KeyValue := qAluno.FieldByName('idEscola').AsString;
+  chkUsoImagem.Checked   := (qAluno.FieldByName('PermiteUsoImagem').AsInteger = 1);
 
   if NOT (qAluno.FieldByName('infoSaude').AsString.Trim = EmptyStr) then
     mSaude.Lines.Add(qAluno.FieldByName('infoSaude').AsString);

@@ -63,6 +63,7 @@ type
     Fnome: String;
     Fativo: Boolean;
     FCPF: string;
+    FpermiteUsoImagem: Boolean;
     Fresponsaveis: TObjectList<TResponsavel>;
 
     procedure SetcargaHoraria(const Value: Real);
@@ -78,6 +79,7 @@ type
     procedure Setperiodo(const Value: String);
     procedure Setativo(const Value: Boolean);
     procedure SetCPF(const Value: string);
+    procedure SetpermiteUsoImagem(const Value: Boolean);
     procedure Setresponsaveis(const Value: TObjectList<TResponsavel>);
 
   public
@@ -94,6 +96,7 @@ type
     property infoEspecial: String read FinfoEspecial write SetinfoEspecial;
     property ativo: Boolean read Fativo write Setativo;
     property CPF: String read FCPF write SetCPF;
+    property permiteUsoImagem: Boolean read FpermiteUsoImagem write SetpermiteUsoImagem;
     property responsaveis: TObjectList<TResponsavel> read Fresponsaveis write Setresponsaveis;
 
     constructor Create;
@@ -205,6 +208,11 @@ end;
 procedure TAluno.Setperiodo(const Value: String);
 begin
   Fperiodo := Value;
+end;
+
+procedure TAluno.SetpermiteUsoImagem(const Value: Boolean);
+begin
+  FpermiteUsoImagem := Value;
 end;
 
 procedure TAluno.Setresponsaveis(const Value: TObjectList<TResponsavel>);
