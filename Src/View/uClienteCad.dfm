@@ -175,7 +175,7 @@ object FrmClienteCad: TFrmClienteCad
         Font.Style = []
         ParentFont = False
         State = cbChecked
-        TabOrder = 2
+        TabOrder = 9
       end
       object edtCargahr: TEdit
         Left = 464
@@ -189,7 +189,7 @@ object FrmClienteCad: TFrmClienteCad
         Font.Style = []
         MaxLength = 10
         ParentFont = False
-        TabOrder = 4
+        TabOrder = 5
         Visible = False
       end
       object edtPai: TEdit
@@ -238,7 +238,7 @@ object FrmClienteCad: TFrmClienteCad
         Font.Style = []
         ParentBiDiMode = False
         ParentFont = False
-        TabOrder = 5
+        TabOrder = 4
         Items.Strings = (
           'Manh'#227
           'Tarde'
@@ -258,7 +258,7 @@ object FrmClienteCad: TFrmClienteCad
         Font.Style = []
         MaxLength = 10
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 2
         Text = '  /  /    '
       end
       object dblkcbbEscola: TDBLookupComboBox
@@ -291,7 +291,7 @@ object FrmClienteCad: TFrmClienteCad
         Font.Style = []
         MaxLength = 50
         ParentFont = False
-        TabOrder = 9
+        TabOrder = 1
       end
       object chkUsoImagem: TCheckBox
         Left = 461
