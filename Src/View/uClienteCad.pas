@@ -285,7 +285,7 @@ begin
   lblTitulo.Caption := 'Editar Mátricula: '+ qAluno.FieldByName('nome').AsString;
 
   edtNome.Text        := qAluno.FieldByName('nome').AsString;
-  medtDtNasc.Text     := FormatDateTime('dd/mm/yyyy' , qAluno.FieldByName('dtNasc').AsDateTime);
+  medtDtNasc.Text     := qAluno.FieldByName('dtNasc').AsString;
   chkAtivo.Checked    := (qAluno.FieldByName('ativoStr').AsString = 'S');
   edtNomePrograma.Text:= qAluno.FieldByName('nomePrograma').AsString;
   edtCargahr.Text     := qAluno.FieldByName('cargaHoraria').AsString;
