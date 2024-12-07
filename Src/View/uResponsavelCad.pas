@@ -31,13 +31,13 @@ type
     Label5: TLabel;
     Label6: TLabel;
     edtCEP: TEdit;
-    edtTel: TEdit;
     Label7: TLabel;
-    edtTel2: TEdit;
     Label8: TLabel;
     pnlTitulo: TPanel;
     lblTitulo: TLabel;
     pnlCentral: TPanel;
+    edtTel: TMaskEdit;
+    edtTel2: TMaskEdit;
     procedure btnCancelarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);

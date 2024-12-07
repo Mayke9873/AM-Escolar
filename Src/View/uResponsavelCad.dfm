@@ -257,34 +257,6 @@ object FrmResponsavelCad: TFrmResponsavelCad
       ParentFont = False
       TabOrder = 6
     end
-    object edtTel: TEdit
-      Left = 24
-      Top = 207
-      Width = 179
-      Height = 29
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      MaxLength = 11
-      ParentFont = False
-      TabOrder = 7
-    end
-    object edtTel2: TEdit
-      Left = 236
-      Top = 207
-      Width = 179
-      Height = 29
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      MaxLength = 11
-      ParentFont = False
-      TabOrder = 8
-    end
     object edtNome: TEdit
       Left = 24
       Top = 47
@@ -340,6 +312,38 @@ object FrmResponsavelCad: TFrmResponsavelCad
       MaxLength = 80
       ParentFont = False
       TabOrder = 3
+    end
+    object edtTel: TMaskEdit
+      Left = 24
+      Top = 207
+      Width = 175
+      Height = 29
+      EditMask = '(99)99999-9999;0;_'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      MaxLength = 14
+      ParentFont = False
+      TabOrder = 7
+      Text = ''
+    end
+    object edtTel2: TMaskEdit
+      Left = 236
+      Top = 207
+      Width = 175
+      Height = 29
+      EditMask = '(99)99999-9999;0;_'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      MaxLength = 14
+      ParentFont = False
+      TabOrder = 8
+      Text = ''
     end
   end
 end
