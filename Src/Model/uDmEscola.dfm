@@ -32,6 +32,9 @@ inherited DmEscola: TDmEscola
       FieldName = 'nome'
       Size = 255
     end
+    object qEscoladeleted: TZDateTimeField
+      FieldName = 'deleted'
+    end
   end
   object zEscola: TZUpdateSQL
     DeleteSQL.Strings = (

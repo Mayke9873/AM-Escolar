@@ -13,6 +13,7 @@ type
     qEscolaid: TZInt64Field;
     qEscolanome: TZUnicodeStringField;
     zEscola: TZUpdateSQL;
+    qEscoladeleted: TZDateTimeField;
   private
     { Private declarations }
   public
