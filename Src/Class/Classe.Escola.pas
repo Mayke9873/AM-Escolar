@@ -20,7 +20,7 @@ type
 implementation
 
 uses
-  uDmEscola;
+  uDmEscola, System.SysUtils;
 
 { TEscola }
 
@@ -50,6 +50,9 @@ end;
 
 procedure TEscola.Setnome(const Value: String);
 begin
+  if Value.Trim = EmptyStr then
+    raise Exception.Create('Nome da escola nao preenchido.'#13#10'Por favor, verifique!');
+
   Fnome := Value;
 end;
 
