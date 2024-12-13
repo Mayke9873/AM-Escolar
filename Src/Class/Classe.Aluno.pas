@@ -187,6 +187,9 @@ end;
 
 procedure TAluno.Setnome(const Value: String);
 begin
+  if Value.Trim = EmptyStr then
+    raise Exception.Create('Nome do aluno nao preenchido.'#13#10'Por favor, verifique!');
+
   Fnome := Value;
 end;
 
@@ -259,6 +262,9 @@ end;
 
 procedure TResponsavel.Setnome(const Value: String);
 begin
+  if Value.Trim = EmptyStr then
+    raise Exception.Create('Nome do responsavel nao preenchido.'#13#10'Por favor, verifique!');
+
   Fnome := Value;
 end;
 
